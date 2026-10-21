@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신품타 — 공부용 뽀모도로 타이머</title>
+<meta name="description" content="공부할 때 켜 두는 Windows용 뽀모도로 타이머. 창을 내리면 화면 위 작은 팝업으로 남아요. 인터넷을 쓰지 않고, 기록은 내 PC에만 남아요.">
+<meta name="theme-color" content="#FAF9F5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#262624" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://shinu61.github.io/ShinPumTa/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="신품타">
+<meta property="og:title" content="신품타 — 공부용 뽀모도로 타이머">
+<meta property="og:description" content="공부할 때 켜 두는 Windows용 뽀모도로 타이머. 창을 내리면 화면 위 작은 팝업으로 남아요.">
+<meta property="og:url" content="https://shinu61.github.io/ShinPumTa/">
+<meta property="og:image" content="https://shinu61.github.io/ShinPumTa/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="신품타 — 집중은 작게, 기록은 또렷하게.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/main.js" defer></script>
+</head>
+<body class="snp t-system">
+
+<header class="wrap rv-load" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 18px; letter-spacing: -0.01em"><img src="assets/app-icon.png" alt="" width="30" height="30" style="display: block; border-radius: 8px"><span>신품타</span></a>
+<nav aria-label="주요 링크" style="display: flex; align-items: center; gap: 22px; font-size: 15px">
+<a href="https://github.com/shinu61/ShinPumTa/releases" style="color: var(--sub)">버전 기록</a>
+<a class="btn btn-sm nav-dl" href="https://github.com/shinu61/ShinPumTa/releases/latest/download/ShinPumTa-Setup.exe">다운로드</a>
+</nav>
+</header>
+
+<main>
+<!-- ① Hero -->
+<section id="top" class="wrap" style="display: flex; flex-wrap: wrap; align-items: center; gap: 56px 72px; padding-top: clamp(28px, 5vw, 64px); padding-bottom: clamp(72px, 9vw, 120px)">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<h1 class="rv-load" style="margin: 0; font-size: clamp(40px, 6vw, 68px); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; animation-delay: 60ms">집중은 작게,<br>기록은 또렷하게.</h1>
+<p class="rv-load lead" style="animation-delay: 140ms">공부할 때 켜 두는 Windows용 뽀모도로 타이머. 창을 내리면 화면 위 작은 팝업으로 남아요.</p>
+<div class="rv-load" style="animation-delay: 220ms; margin-top: 8px">
+<div class="dl-desk">
+<a class="btn btn-lg" href="https://github.com/shinu61/ShinPumTa/releases/latest/download/ShinPumTa-Setup.exe"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"></path><path d="M7 10l5 5 5-5"></path><path d="M5 20h14"></path></svg><span>Windows용 무료 다운로드</span></a>
+<p class="meta">Windows 10·11 64비트 · 약 110MB · <a href="https://github.com/shinu61/ShinPumTa/releases">버전 기록</a></p>
+</div>
+<div class="dl-mob">
+<p>휴대폰에서는 설치할 수 없어요. PC에서 이 페이지를 열어 주세요.</p>
+<button class="btn btn-sm btn-ghost" type="button" data-copy>페이지 주소 복사</button>
+</div>
+</div>
+</div>
+<div class="rv-load" style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center; animation-delay: 320ms; animation-duration: 1.2s">
+<div class="aw" id="hero" role="group" aria-label="신품타 타이머 미리보기 — 직접 눌러 볼 수 있어요">
+<span class="aw-title">신품타</span>
+<span class="aw-i" style="left: 240.25px; top: 11.25px; width: 15px; height: 15px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+<span class="aw-i" style="left: 274.5px; top: 11.5px; width: 14.5px; height: 14.5px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14"></path></svg></span>
+<span class="aw-i" style="left: 309.25px; top: 12.25px; width: 13px; height: 13px" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></span>
+<div class="aw-seg">
+<span class="aw-knob" aria-hidden="true"></span>
+<button class="aw-opt s" type="button" aria-pressed="true" data-act="study">공부</button>
+<button class="aw-opt r" type="button" aria-pressed="false" data-act="rest">휴식</button>
+</div>
+<div class="aw-time aw-shift" data-h="time">25:00</div>
+<div class="aw-status aw-shift" data-h="status" aria-live="polite">시작 전</div>
+<div class="aw-track aw-shift" aria-hidden="true"><div class="aw-fill" data-h="fill" style="transform: scaleX(0)"></div></div>
+<div class="aw-step">
+<button class="aw-sbtn" type="button" style="left: 96px" aria-label="시간 줄이기" data-act="dec"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 6h7"></path></svg></button>
+<span class="aw-slbl" data-h="step">공부 25분</span>
+<button class="aw-sbtn" type="button" style="left: 216px" aria-label="시간 늘리기" data-act="inc"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 2.75v6.5"></path><path d="M2.75 6h6.5"></path></svg></button>
+</div>
+<div class="aw-chips">
+<button class="chip sel" type="button" aria-pressed="true" data-tag="0"><span class="dot" style="background: #D97757"></span>자습</button>
+<button class="chip" type="button" aria-pressed="false" data-tag="1"><span class="dot" style="background: #B9583A"></span>프로젝트</button>
+<button class="chip" type="button" aria-pressed="false" data-tag="2"><span class="dot" style="background: #E8A98C"></span>수업</button>
+<span class="chip chip-add" aria-hidden="true"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M5 1.75v6.5"></path><path d="M1.75 5h6.5"></path></svg></span>
+</div>
+<button class="aw-side l" type="button" aria-label="초기화" data-act="left">
+<svg class="ic-idle" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.6 9a6.4 6.4 0 1 0 2-4.65"></path><path d="M2.4 2.6v3.5h3.5"></path></svg>
+<svg class="ic-run" viewBox="0 0 18 18" aria-hidden="true"><rect x="5.25" y="5.25" width="7.5" height="7.5" rx="1.6" fill="currentColor"></rect></svg>
+</button>
+<span class="aw-lbl l" data-h="leftlbl">초기화</span>
+<button class="aw-play" type="button" aria-label="시작" data-act="play">
+<svg class="ic-play" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><path d="M28.4 26.6a1.2 1.2 0 0 1 1.8-1l9.3 5.4a1.2 1.2 0 0 1 0 2l-9.3 5.4a1.2 1.2 0 0 1-1.8-1z" fill="currentColor"></path></svg>
+<svg class="ic-pause" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><rect x="26" y="26.25" width="3.5" height="11.5" rx="1.2" fill="currentColor"></rect><rect x="33.5" y="26.25" width="3.5" height="11.5" rx="1.2" fill="currentColor"></rect></svg>
+</button>
+<a class="aw-side rt" href="#day" aria-label="하루 정리 보기"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6.6"></circle><path d="M9 2.4A6.6 6.6 0 0 1 15.6 9H9z" fill="currentColor" stroke="none" opacity=".45"></path></svg></a>
+<span class="aw-lbl rt">하루 정리</span>
+</div>
+</div>
+</section>
+
+<!-- ② Mini popup scene -->
+<section class="scene" id="popup" aria-labelledby="popup-title">
+<div class="stage" data-phase="0">
+<div class="rv" style="display: flex; flex-direction: column; align-items: center; gap: 10px">
+<p class="kicker">미니 팝업</p>
+<h2 id="popup-title" class="sr">창을 내리면 화면 위에 작은 팝업으로 남아요</h2>
+<p class="caps" aria-hidden="true">
+<span class="cap" data-c="0">공부 중에 창을 내리면,</span>
+<span class="cap" data-c="1">화면 위 가운데, 작은 팝업으로 남아요.</span>
+<span class="cap" data-c="2">테두리는 흐른 시간만큼 차올라요.</span>
+<span class="cap" data-c="3">끌어서 옮겨 보세요. 제자리와 가장자리에 붙어요.</span>
+</p>
+</div>
+<div class="laptop rv" data-lag="60">
+<div class="bezel">
+<div class="screen">
+<div class="desk">
+<div class="doc" style="left: 5%; top: 7%; width: calc(var(--u) * 400); height: calc(var(--u) * 500)" aria-hidden="true"></div>
+<div class="doc" style="right: 5%; top: 13%; width: calc(var(--u) * 380); height: calc(var(--u) * 440)" aria-hidden="true"></div>
+<div class="doc doc3" style="left: 31%; top: 44%; width: calc(var(--u) * 300); height: calc(var(--u) * 300)" aria-hidden="true"></div>
+<div class="taskbar" aria-hidden="true"><i class="tbi"></i><i class="tbi"></i><i class="tbi"></i><span class="tb-app"><img loading="lazy" decoding="async" src="assets/app-icon.png" alt=""></span><i class="tbi"></i></div>
+<div class="shell">
+<div class="aw mw run playing" aria-hidden="true">
+<span class="aw-title">신품타</span>
+<span class="aw-i" style="left: 240.25px; top: 11.25px; width: 15px; height: 15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+<span class="aw-i" style="left: 274.5px; top: 11.5px; width: 14.5px; height: 14.5px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14"></path></svg></span>
+<span class="aw-i" style="left: 309.25px; top: 12.25px; width: 13px; height: 13px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></span>
+<div class="aw-seg"><span class="aw-knob"></span><span class="aw-opt s">공부</span><span class="aw-opt r">휴식</span></div>
+<div class="aw-time aw-shift ctime"></div>
+<div class="aw-status aw-shift">자습 · 집중 중</div>
+<div class="aw-track aw-shift"><div class="aw-fill"></div></div>
+<div class="aw-chips"><span class="chip sel"><span class="dot" style="background: #D97757"></span>자습</span><span class="chip"><span class="dot" style="background: #B9583A"></span>프로젝트</span><span class="chip"><span class="dot" style="background: #E8A98C"></span>수업</span><span class="chip chip-add"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M5 1.75v6.5"></path><path d="M1.75 5h6.5"></path></svg></span></div>
+<span class="aw-side l"><svg viewBox="0 0 18 18"><rect x="5.25" y="5.25" width="7.5" height="7.5" rx="1.6" fill="currentColor"></rect></svg></span>
+<span class="aw-lbl l">끝내기</span>
+<span class="aw-play"><svg viewBox="0 0 64 64" width="64" height="64"><rect x="26" y="26.25" width="3.5" height="11.5" rx="1.2" fill="currentColor"></rect><rect x="33.5" y="26.25" width="3.5" height="11.5" rx="1.2" fill="currentColor"></rect></svg></span>
+<span class="aw-side rt"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="6.6"></circle><path d="M9 2.4A6.6 6.6 0 0 1 15.6 9H9z" fill="currentColor" stroke="none" opacity=".45"></path></svg></span>
+<span class="aw-lbl rt">하루 정리</span>
+</div>
+<div class="pp pl" aria-hidden="true">
+<svg class="pp-ring" viewBox="0 0 216 46"><path class="pfill" pathLength="1" d="M108 2H193A21 21 0 0 1 193 44H108"></path><path class="pfill" pathLength="1" d="M108 2H23A21 21 0 0 0 23 44H108"></path></svg>
+<span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 9.5v4l2.6 2.6"></path><path d="M10 2.5h4"></path></svg></span>
+<span class="pp-time ctime"></span>
+<span class="pp-tag"><span class="t-run">자습</span><span class="t-done">공부 완료!</span></span>
+<span class="pp-pause"><svg viewBox="0 0 10 10"><rect x="2.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect><rect x="5.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect></svg></span>
+</div>
+<button class="grab" type="button" aria-label="미니 팝업 옮기기 — 끌거나 방향키로 옮기고, Home 키로 제자리"></button>
+</div>
+</div>
+</div>
+</div>
+<div class="lbase" aria-hidden="true"></div>
+</div>
+</div>
+</section>
+
+<!-- ③ Study / Rest -->
+<section class="wrap sec" aria-labelledby="rest-title">
+<div class="split">
+<div class="txt">
+<p class="kicker rv">공부와 휴식</p>
+<h2 id="rest-title" class="h2 rv">내가 ▶를 누를 때 시작해요.</h2>
+<p class="lead rv">공부는 5분, 휴식은 1분 단위로. 시간이 끝나면 다음 순서로 바뀐 채 기다려요. 내가 ▶를 누를 때 시작해요.</p>
+<div class="note rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9z"></path><path d="M10 20a2 2 0 0 0 4 0"></path></svg><span>알림은 Windows 설정(무음·음량·방해 금지)을 따라요. 소리가 꺼져 있어도, 끝나면 화면에는 항상 표시돼요.</span></div>
+</div>
+<div class="vis rv" data-demo="rest" data-lag="-40">
+<div class="aw crop k-study" id="restDemo" aria-hidden="true">
+<span class="aw-title">신품타</span>
+<span class="aw-i" style="left: 240.25px; top: 11.25px; width: 15px; height: 15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+<span class="aw-i" style="left: 274.5px; top: 11.5px; width: 14.5px; height: 14.5px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14"></path></svg></span>
+<span class="aw-i" style="left: 309.25px; top: 12.25px; width: 13px; height: 13px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></span>
+<div class="aw-seg"><span class="aw-knob"></span><span class="aw-opt s">공부</span><span class="aw-opt r">휴식</span></div>
+<div class="aw-time rd"><span class="s" style="grid-area: 1 / 1">25:00</span><span class="r" style="grid-area: 1 / 1">05:00</span></div>
+<div class="aw-status">시작 전</div>
+<div class="aw-track"></div>
+<div class="aw-step">
+<span class="aw-sbtn" style="left: 96px"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 6h7"></path></svg></span>
+<span class="aw-slbl rd"><span class="s" style="grid-area: 1 / 1">공부 25분</span><span class="r" style="grid-area: 1 / 1">휴식 5분</span></span>
+<span class="aw-sbtn" style="left: 216px"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 2.75v6.5"></path><path d="M2.75 6h6.5"></path></svg></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ④ Tags -->
+<section class="wrap sec" aria-labelledby="tag-title" style="padding-top: 0">
+<div class="split" style="flex-direction: row-reverse">
+<div class="txt">
+<p class="kicker rv">태그</p>
+<h2 id="tag-title" class="h2 rv">무엇을 공부했는지, 하나 골라 두기.</h2>
+<p class="lead rv">무엇을 공부했는지 골라 두세요. 자습·프로젝트·수업, 원하는 대로 추가하고 지울 수 있어요.</p>
+</div>
+<div class="vis rv" data-lag="-40">
+<div class="card tagcard tagsWrap">
+<div class="tagrow zoom" id="tagRow"><span class="chip-rv"><button class="chip sel" type="button" aria-pressed="true" data-pick="t1"><span class="dot" style="background: #D97757"></span>자습</button></span><span class="chip-rv"><button class="chip" type="button" aria-pressed="false" data-pick="t2"><span class="dot" style="background: #B9583A"></span>프로젝트</button></span><span class="chip-rv"><button class="chip" type="button" aria-pressed="false" data-pick="t3"><span class="dot" style="background: #E8A98C"></span>수업</button></span></div>
+<p class="taghint">눌러서 골라 보고, +로 하나 더 만들어 보세요.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ⑤ Day summary -->
+<section id="day" class="wrap sec" aria-labelledby="day-title" style="padding-top: 0">
+<div class="split">
+<div class="txt">
+<p class="kicker rv">하루 정리</p>
+<h2 id="day-title" class="h2 rv">하루를 한 바퀴로.</h2>
+<p class="lead rv">오늘 언제, 무엇을, 얼마나 공부했는지 한 바퀴에. 지난 날도 넘겨 볼 수 있어요.</p>
+</div>
+<div class="vis rv" data-lag="-40">
+<div class="aw dayw" role="img" aria-label="하루 정리 예시: 10월 22일 총 7시간, 9구간. 자습 3시간 5분, 프로젝트 2시간 15분, 수업 1시간 40분.">
+<span class="aw-title">신품타</span>
+<span class="aw-i" style="left: 240.25px; top: 11.25px; width: 15px; height: 15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+<span class="aw-i" style="left: 274.5px; top: 11.5px; width: 14.5px; height: 14.5px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14"></path></svg></span>
+<span class="aw-i" style="left: 309.25px; top: 12.25px; width: 13px; height: 13px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></span>
+<span class="dw-back" aria-hidden="true"><svg viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.75 1.25L1.25 5l3.5 3.75"></path></svg>타이머</span>
+<span class="dw-chev" style="left: 33.5px" aria-hidden="true"><svg viewBox="0 0 6 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2L1 6l4 4"></path></svg></span>
+<span class="dw-date" aria-hidden="true">10월 22일 목요일</span>
+<span class="dw-chev" style="left: 298.75px; color: var(--faint)" aria-hidden="true"><svg viewBox="0 0 6 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M1 2l4 4-4 4"></path></svg></span>
+<span class="dw-today" aria-hidden="true"></span>
+<span class="dw-wk" style="left: 36.25px" aria-hidden="true"><i style="height: 54%"></i></span>
+<span class="dw-wl" style="left: 40.25px" aria-hidden="true">금</span>
+<span class="dw-wk" style="left: 79.25px" aria-hidden="true"><i style="height: 47%"></i></span>
+<span class="dw-wl" style="left: 83.25px" aria-hidden="true">토</span>
+<span class="dw-wk" style="left: 122.25px" aria-hidden="true"><i style="height: 35%"></i></span>
+<span class="dw-wl" style="left: 126.25px" aria-hidden="true">일</span>
+<span class="dw-wk" style="left: 165.25px" aria-hidden="true"><i style="height: 72%"></i></span>
+<span class="dw-wl" style="left: 169.25px" aria-hidden="true">월</span>
+<span class="dw-wk" style="left: 208.25px" aria-hidden="true"><i style="height: 47%"></i></span>
+<span class="dw-wl" style="left: 212.25px" aria-hidden="true">화</span>
+<span class="dw-wk" style="left: 251.25px" aria-hidden="true"><i style="height: 59%"></i></span>
+<span class="dw-wl" style="left: 255.25px" aria-hidden="true">수</span>
+<span class="dw-wk t" style="left: 294.25px" aria-hidden="true"><i style="height: 100%"></i></span>
+<span class="dw-wl t" style="left: 298.25px" aria-hidden="true">오늘</span>
+<svg class="dw-ring" viewBox="-130 -130 260 260" aria-hidden="true">
+<circle class="base" cx="0" cy="0" r="87"></circle>
+<line class="tk mj" x1="0.00" y1="-105.25" x2="0.00" y2="-110.75"></line>
+<line class="tk" x1="27.18" y1="-101.42" x2="27.95" y2="-104.32"></line>
+<line class="tk" x1="52.50" y1="-90.93" x2="54.00" y2="-93.53"></line>
+<line class="tk" x1="74.25" y1="-74.25" x2="76.37" y2="-76.37"></line>
+<line class="tk" x1="90.93" y1="-52.50" x2="93.53" y2="-54.00"></line>
+<line class="tk" x1="101.42" y1="-27.18" x2="104.32" y2="-27.95"></line>
+<line class="tk mj" x1="105.25" y1="0.00" x2="110.75" y2="0.00"></line>
+<line class="tk" x1="101.42" y1="27.18" x2="104.32" y2="27.95"></line>
+<line class="tk" x1="90.93" y1="52.50" x2="93.53" y2="54.00"></line>
+<line class="tk" x1="74.25" y1="74.25" x2="76.37" y2="76.37"></line>
+<line class="tk" x1="52.50" y1="90.93" x2="54.00" y2="93.53"></line>
+<line class="tk" x1="27.18" y1="101.42" x2="27.95" y2="104.32"></line>
+<line class="tk mj" x1="0.00" y1="105.25" x2="0.00" y2="110.75"></line>
+<line class="tk" x1="-27.18" y1="101.42" x2="-27.95" y2="104.32"></line>
+<line class="tk" x1="-52.50" y1="90.93" x2="-54.00" y2="93.53"></line>
+<line class="tk" x1="-74.25" y1="74.25" x2="-76.37" y2="76.37"></line>
+<line class="tk" x1="-90.93" y1="52.50" x2="-93.53" y2="54.00"></line>
+<line class="tk" x1="-101.42" y1="27.18" x2="-104.32" y2="27.95"></line>
+<line class="tk mj" x1="-105.25" y1="0.00" x2="-110.75" y2="0.00"></line>
+<line class="tk" x1="-101.42" y1="-27.18" x2="-104.32" y2="-27.95"></line>
+<line class="tk" x1="-90.93" y1="-52.50" x2="-93.53" y2="-54.00"></line>
+<line class="tk" x1="-74.25" y1="-74.25" x2="-76.37" y2="-76.37"></line>
+<line class="tk" x1="-52.50" y1="-90.93" x2="-54.00" y2="-93.53"></line>
+<line class="tk" x1="-27.18" y1="-101.42" x2="-27.95" y2="-104.32"></line>
+<text x="0" y="-116.5" text-anchor="middle">0</text>
+<text x="120.25" y="3.5" text-anchor="middle">6</text>
+<text x="0" y="123.5" text-anchor="middle">12</text>
+<text x="-120" y="3.5" text-anchor="middle">18</text>
+<path class="seg" d="M61.52 61.52A87 87 0 0 1 46.75 73.38" stroke="#D97757"></path>
+<path class="seg" d="M43.50 75.34A87 87 0 0 1 27.97 82.38" stroke="#D97757"></path>
+<path class="seg" d="M22.52 84.04A87 87 0 0 1 5.69 86.81" stroke="#B9583A"></path>
+<path class="seg" d="M-36.77 78.85A87 87 0 0 1 -52.96 69.02" stroke="#E8A98C"></path>
+<path class="seg" d="M-55.92 66.65A87 87 0 0 1 -69.02 52.96" stroke="#E8A98C"></path>
+<path class="seg" d="M-77.17 40.17A87 87 0 0 1 -83.52 24.35" stroke="#B9583A"></path>
+<path class="seg" d="M-84.04 22.52A87 87 0 0 1 -86.81 5.69" stroke="#B9583A"></path>
+<path class="seg" d="M-75.34 -43.50A87 87 0 0 1 -64.14 -58.78" stroke="#D97757"></path>
+<path class="seg" d="M-61.52 -61.52A87 87 0 0 1 -49.90 -71.27" stroke="#D97757"></path>
+<line class="ndl" x1="23.24" y1="-65.71" x2="34.75" y2="-98.24"></line>
+<circle class="ndl-dot" cx="34.75" cy="-98.24" r="3"></circle>
+</svg>
+<div class="dw-total" aria-hidden="true"><span class="dt-num"></span>시간</div>
+<div class="dw-sub" aria-hidden="true">오늘 공부 · 9구간</div>
+<div class="dw-row" style="top: 448px" aria-hidden="true"><span class="dot" style="background: #D97757"></span><span class="dw-nm">자습</span><span class="dw-tm">3시간 5분</span><span class="dw-bar" style="width: 213.5px"><i style="width: 213.5px; background: #D97757"></i></span></div>
+<div class="dw-row" style="top: 480.5px" aria-hidden="true"><span class="dot" style="background: #B9583A"></span><span class="dw-nm">프로젝트</span><span class="dw-tm">2시간 15분</span><span class="dw-bar" style="width: 206px"><i style="width: 150px; background: #B9583A"></i></span></div>
+<div class="dw-row" style="top: 513px" aria-hidden="true"><span class="dot" style="background: #E8A98C"></span><span class="dw-nm">수업</span><span class="dw-tm">1시간 40분</span><span class="dw-bar" style="width: 206px"><i style="width: 111px; background: #E8A98C"></i></span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ⑥ Save / overtime -->
+<section class="wrap sec" aria-labelledby="save-title" style="padding-top: 0">
+<div class="split" style="flex-direction: row-reverse">
+<div class="txt">
+<p class="kicker rv">기록 확인 · 더 공부하기</p>
+<h2 id="save-title" class="h2 rv">흐름이 좋을 땐, 조금 더.</h2>
+<p class="lead rv">끝날 때마다 저장할지 물어봐요. 흐름이 좋으면 ‘저장하고 더 공부하기’ — 추가 시간은 +로 따로 세고, 상한은 없어요.</p>
+<div class="rv" style="margin-top: 10px; display: flex">
+<div class="zoom">
+<div class="pp over" aria-hidden="true">
+<span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 9.5v4l2.6 2.6"></path><path d="M10 2.5h4"></path></svg></span>
+<span class="pp-time">+01:15</span>
+<span class="pp-tag"><span>자습 · 추가</span></span>
+<span class="pp-pause"><svg viewBox="0 0 10 10"><rect x="2.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect><rect x="5.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect></svg></span>
+</div>
+</div>
+</div>
+</div>
+<div class="vis rv" data-demo="save" data-lag="-40">
+<div class="aw rest done" id="saveDemo" data-stage="0" aria-hidden="true">
+<span class="aw-title">신품타</span>
+<span class="aw-i" style="left: 240.25px; top: 11.25px; width: 15px; height: 15px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+<span class="aw-i" style="left: 274.5px; top: 11.5px; width: 14.5px; height: 14.5px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14"></path></svg></span>
+<span class="aw-i" style="left: 309.25px; top: 12.25px; width: 13px; height: 13px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></span>
+<div class="aw-seg"><span class="aw-knob"></span><span class="aw-opt s">공부</span><span class="aw-opt r">휴식</span></div>
+<div class="aw-time aw-shift" data-s="time">00:00</div>
+<div class="aw-status aw-shift" data-s="label">공부 완료!</div>
+<div class="aw-track aw-shift"><div class="aw-fill"></div></div>
+<div class="aw-step">
+<span class="aw-sbtn" style="left: 96px"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M2.5 6h7"></path></svg></span>
+<span class="aw-slbl">휴식 5분</span>
+<span class="aw-sbtn" style="left: 216px"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 2.75v6.5"></path><path d="M2.75 6h6.5"></path></svg></span>
+</div>
+<div class="aw-chips"><span class="chip sel"><span class="dot" style="background: #D97757"></span>자습</span><span class="chip"><span class="dot" style="background: #B9583A"></span>프로젝트</span><span class="chip"><span class="dot" style="background: #E8A98C"></span>수업</span><span class="chip chip-add"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M5 1.75v6.5"></path><path d="M1.75 5h6.5"></path></svg></span></div>
+<span class="aw-side l"><svg class="ic-idle" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 9a6.4 6.4 0 1 0 2-4.65"></path><path d="M2.4 2.6v3.5h3.5"></path></svg><svg class="ic-run" viewBox="0 0 18 18"><rect x="5.25" y="5.25" width="7.5" height="7.5" rx="1.6" fill="currentColor"></rect></svg></span>
+<span class="aw-lbl l"><span class="ic-idle">초기화</span><span class="ic-run">끝내기</span></span>
+<span class="aw-play"><svg class="ic-play" viewBox="0 0 64 64" width="64" height="64"><path d="M28.4 26.6a1.2 1.2 0 0 1 1.8-1l9.3 5.4a1.2 1.2 0 0 1 0 2l-9.3 5.4a1.2 1.2 0 0 1-1.8-1z" fill="currentColor"></path></svg><svg class="ic-pause" viewBox="0 0 64 64" width="64" height="64"><rect x="26" y="26.25" width="3.5" height="11.5" rx="1.2" fill="currentColor"></rect><rect x="33.5" y="26.25" width="3.5" height="11.5" rx="1.2" fill="currentColor"></rect></svg></span>
+<span class="aw-side rt"><svg viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="6.6"></circle><path d="M9 2.4A6.6 6.6 0 0 1 15.6 9H9z" fill="currentColor" stroke="none" opacity=".45"></path></svg></span>
+<span class="aw-lbl rt">하루 정리</span>
+<div class="scrim"></div>
+<div class="sheet">
+<div class="sh-title">기록할까요?</div>
+<div class="sh-sub">25분 공부 · 자습 (14:05–14:30)</div>
+<span class="sh-b b1">저장</span>
+<span class="sh-b b2">저장하고 더 공부하기</span>
+<span class="sh-b b3">버리기</span>
+</div>
+<svg class="cursor" viewBox="0 0 22 22"><path d="M2 1.5l0 16.2 4.3-3.9 2.9 6.4 3-1.4-2.9-6.2 5.9-.4z" fill="#FFFFFF" stroke="#1F1E1D" stroke-width="1.4" stroke-linejoin="round"></path></svg>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ⑦ More features -->
+<section class="wrap sec" aria-labelledby="more-title" style="padding-top: 0">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px">
+<p class="kicker rv">그 밖의 기능</p>
+<h2 id="more-title" class="h2 rv">조용히 곁에 있도록.</h2>
+</div>
+<div class="fgrid">
+<article class="fcard rv" data-demo="theme">
+<div class="fvis" aria-hidden="true">
+<div class="mt k-light" id="themeDemo">
+<div class="mt-win"><span class="mt-time">25:00</span><span class="mt-line"><i></i></span></div>
+<div class="mt-seg"><span class="mt-knob"></span><span>시스템</span><span class="mt-l">라이트</span><span class="mt-d">다크</span></div>
+</div>
+</div>
+<h3>테마</h3>
+<p>시스템·라이트·다크 중에 고르면 0.4초 동안 부드럽게 바뀌어요. 시스템을 고르면 Windows 설정을 따라가요.</p>
+</article>
+<article class="fcard rv" data-lag="70">
+<div class="fvis oled" aria-hidden="true">
+<div class="ol-bg"><i class="ol-doc" style="left: 8%; top: 40%; width: 44%; height: 52%"></i><i class="ol-doc" style="left: 58%; top: 46%; width: 34%; height: 44%"></i></div>
+<div class="ol-pill"><div class="pp force-dark"><span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 9.5v4l2.6 2.6"></path><path d="M10 2.5h4"></path></svg></span><span class="pp-time">18:42</span><span class="pp-tag"><span>자습</span></span><span class="pp-pause"><svg viewBox="0 0 10 10"><rect x="2.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect><rect x="5.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect></svg></span></div></div>
+</div>
+<h3>집중 화면</h3>
+<p>OLED 화면에서 2분 동안 입력이 없으면 주변을 어둡게 하고 팝업만 남겨요. 번인을 막으려고 팝업이 천천히 둥실 떠다니며 조금씩 자리를 옮겨요.</p>
+</article>
+<article class="fcard rv" data-lag="140">
+<div class="fvis" aria-hidden="true">
+<div class="lt">
+<div class="lt-desk"><img loading="lazy" decoding="async" src="assets/app-icon.png" alt=""><span>신품타</span></div>
+<div class="lt-bar"><i></i><i></i><span class="lt-app"><img loading="lazy" decoding="async" src="assets/app-icon.png" alt=""></span><i></i></div>
+</div>
+</div>
+<h3>가볍게 열기</h3>
+<p>시작 메뉴와 바탕화면 바로가기로, 작업 표시줄에서도 바로 열어요.</p>
+</article>
+</div>
+</section>
+
+<!-- ⑧ Privacy -->
+<section class="wrap" aria-labelledby="privacy-title" style="padding-top: clamp(96px, 12vw, 170px); padding-bottom: clamp(96px, 12vw, 170px); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 22px">
+<h2 id="privacy-title" class="rv" style="margin: 0; font-size: clamp(30px, 4.6vw, 56px); line-height: 1.3; font-weight: 600; letter-spacing: -0.02em">인터넷을 쓰지 않아요.<br>기록은 내 PC에만 남아요.</h2>
+<p class="rv" style="margin: 0; font-size: 17px; color: var(--sub)">계정 없음 · 광고 없음 · 추적 없음</p>
+</section>
+
+<!-- ⑨ Install -->
+<section class="wrap sec" aria-labelledby="install-title" style="padding-top: 0">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px">
+<p class="kicker rv">설치 안내</p>
+<h2 id="install-title" class="h2 rv">설치는 세 단계면 돼요.</h2>
+</div>
+<ol class="fgrid" style="list-style: none; margin: 0; padding: 0">
+<li class="fcard rv">
+<div class="fvis" aria-hidden="true">
+<div class="fl"><svg class="fl-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path></svg><span class="fl-t"><b>ShinPumTa-Setup.exe</b><small>약 110MB · 받기 완료</small></span><svg class="fl-ok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></div>
+</div>
+<span class="num">1</span>
+<h3>설치 파일 받기</h3>
+<p>다운로드 버튼으로 ShinPumTa-Setup.exe를 받아 실행해요. Windows 10·11 64비트용이에요.</p>
+</li>
+<li class="fcard rv" data-lag="70">
+<div class="fvis ss" aria-hidden="true">
+<div class="ss-in">
+<span class="ss-title">Windows의 PC 보호</span>
+<i class="ss-line" style="width: 90%"></i>
+<i class="ss-line" style="width: 68%"></i>
+<span class="ss-more">추가 정보<em class="mark">1</em></span>
+<span class="ss-btns"><span class="ss-b run">실행<em class="mark">2</em></span><span class="ss-b">실행 안 함</span></span>
+</div>
+</div>
+<span class="num">2</span>
+<h3>‘Windows의 PC 보호’가 뜨면 추가 정보 → 실행</h3>
+<p>개인이 만든 앱이라 아직 코드 서명이 없어서 나오는 안내예요. 이 페이지나 GitHub 릴리스에서 받은 파일인지 확인하고 실행해 주세요.</p>
+</li>
+<li class="fcard rv" data-lag="140">
+<div class="fvis" aria-hidden="true">
+<div class="ins">
+<div class="ins-tb"><img loading="lazy" decoding="async" src="assets/app-icon.png" alt=""><span>신품타 설치</span></div>
+<div class="ins-b"><span class="ins-lbl">설치 위치</span><span class="ins-f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg><span>C:\…\신품타</span></span><span class="ins-go">설치</span></div>
+</div>
+</div>
+<span class="num">3</span>
+<h3>설치 위치 고르고 완료</h3>
+<p>원하는 폴더를 고르고 설치를 누르면 끝이에요. 시작 메뉴와 바탕화면에 바로가기가 생겨요.</p>
+</li>
+</ol>
+<div class="update rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3.5"></path><path d="M4 4v4h4"></path><path d="M4 13a8 8 0 0 0 14.9 3.5"></path><path d="M20 20v-4h-4"></path></svg><span><b>업데이트</b> — 새 버전을 받아 그대로 설치하면 돼요. 기록과 설정은 그대로 남아요.</span></div>
+</section>
+
+<!-- ⑩ Final CTA -->
+<section class="wrap" aria-labelledby="cta-title" style="padding-top: clamp(64px, 8vw, 110px); padding-bottom: clamp(88px, 11vw, 150px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<div class="rv" style="margin-bottom: 18px" aria-hidden="true">
+<div class="zoom">
+<div class="pp float">
+<svg class="pp-ring" viewBox="0 0 216 46"><path pathLength="1" stroke-dasharray="0.42 2" d="M108 2H193A21 21 0 0 1 193 44H108"></path><path pathLength="1" stroke-dasharray="0.42 2" d="M108 2H23A21 21 0 0 0 23 44H108"></path></svg>
+<span class="pp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13.5" r="7.5"></circle><path d="M12 9.5v4l2.6 2.6"></path><path d="M10 2.5h4"></path></svg></span>
+<span class="pp-time">14:32</span>
+<span class="pp-tag"><span>자습</span></span>
+<span class="pp-pause"><svg viewBox="0 0 10 10"><rect x="2.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect><rect x="5.5" y="0.5" width="2" height="9" rx=".8" fill="currentColor"></rect></svg></span>
+</div>
+</div>
+</div>
+<h2 id="cta-title" class="h2 rv">책상 위에 조용한 타이머 하나.</h2>
+<p class="lead rv">무료예요. 설치하고 ▶만 누르면 돼요.</p>
+<div class="rv dl-center" style="margin-top: 10px; width: 100%">
+<div class="dl-desk">
+<a class="btn btn-lg" href="https://github.com/shinu61/ShinPumTa/releases/latest/download/ShinPumTa-Setup.exe"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"></path><path d="M7 10l5 5 5-5"></path><path d="M5 20h14"></path></svg><span>Windows용 무료 다운로드</span></a>
+<p class="meta">Windows 10·11 64비트 · 약 110MB · <a href="https://github.com/shinu61/ShinPumTa/releases">버전 기록</a></p>
+</div>
+<div class="dl-mob">
+<p>휴대폰에서는 설치할 수 없어요. PC에서 이 페이지를 열어 주세요.</p>
+<button class="btn btn-sm btn-ghost" type="button" data-copy>페이지 주소 복사</button>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="wrap rv">
+<div class="foot">
+<span style="display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600"><img loading="lazy" decoding="async" src="assets/app-icon.png" alt="" width="22" height="22" style="display: block; border-radius: 6px">신품타</span>
+<nav aria-label="바닥글 링크"><a href="https://github.com/shinu61/ShinPumTa/releases">버전 기록</a><a href="https://github.com/shinu61/ShinPumTa/issues">문의 (GitHub Issues)</a><span>개인 프로젝트입니다</span></nav>
+</div>
+</footer>
+
+</body>
+</html>
