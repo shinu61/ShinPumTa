@@ -309,3 +309,21 @@ body{margin:0}
 @media (max-width:400px){.zoom{zoom:1.25}}
 @media (max-width:371px){.aw:not(.mw){zoom:.9}}
 @media (max-width:337px){.aw:not(.mw){zoom:.82}}
+
+/* 새 버전 소식 카드 (assets/whatsnew.js) */
+.wn{position:fixed;right:24px;bottom:24px;z-index:50;width:min(360px,calc(100vw - 32px));padding:18px 20px 20px;border-radius:20px;background:var(--win);color:var(--text);box-shadow:0 0 0 1px var(--line),var(--shadow-lg);opacity:0;transform:translateY(18px) scale(.98);transform-origin:100% 100%;pointer-events:none;transition:opacity .45s var(--ease),transform .7s var(--ease),background-color .4s var(--ease)}
+.wn.on{opacity:1;transform:none;pointer-events:auto}
+.wn-top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.wn-badge{font-size:12px;font-weight:700;line-height:1;color:var(--accent-ink);background:var(--accent-soft);padding:6px 10px;border-radius:999px}
+.wn-date{font-size:13px;color:var(--muted)}
+.wn-x{margin-left:auto;width:30px;height:30px;border:0;padding:0;border-radius:50%;background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer;transition:background-color .25s var(--ease),transform .18s var(--ease)}
+.wn-x:hover{background:var(--surface)}
+.wn-x:active{transform:scale(.92)}
+.wn h2{margin:0 0 8px;font-size:19px;line-height:1.35;font-weight:700;letter-spacing:-.01em}
+.wn ul{margin:0 0 18px;padding-left:18px;font-size:15px;line-height:1.6;color:var(--sub)}
+.wn li{opacity:0;transform:translateY(6px);transition:opacity .4s var(--ease),transform .6s var(--ease)}
+.wn li+li{margin-top:4px}
+.wn.on li{opacity:1;transform:none}
+.wn-actions{display:flex;align-items:center;gap:16px;font-size:14px}
+@media (max-width:560px){.wn{left:16px;right:16px;bottom:16px;width:auto;transform-origin:50% 100%}.wn .btn{display:none}}
+@media (prefers-reduced-motion:reduce){.wn,.wn li{transform:none !important;transition:opacity .3s linear}}
